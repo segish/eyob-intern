@@ -8,7 +8,7 @@ const router = express.Router();
 
 
 
-router.get("/getallusers",protectRoute,roleRoute(["admin"]),getAllUsers)
+router.get("/getallusers",getAllUsers)
 
 router.post("/create",protectRoute,roleRoute(["admin"]),createUser);
 router.post("/search",protectRoute,roleRoute(["admin"]),searchUser);
